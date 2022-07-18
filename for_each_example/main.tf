@@ -13,6 +13,11 @@ resource "aws_instance" "my_instance" {
   for_each = var.imagemap
   ami      = each.value
   instance_type     = "t2.micro"
+  timeouts {
+	create = "20m"
+        delete = "4h"
+}
+  ignore_change = true
   tags = {
     Name = "my_instance"
   }
