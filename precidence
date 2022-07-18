@@ -1,0 +1,12 @@
+precidence
+
+Highest
+
+-var on cli
+*.auto.tfvars
+terraform.tfvars
+ENV Vars
+main.tf default
+
+
+Lowest
